@@ -1,0 +1,9 @@
+#!/bin/bash
+# Fake `gh`: canned answers for the calls reviewfren makes. The data files
+# live next to this directory; FAKE_GH_THREADS points at another threads file.
+DIR=$(dirname "$(readlink -f "$0")")/..
+case "$1 $2" in
+  "pr list") cat "$DIR/prs.json" ;;
+  "api graphql") cat "${FAKE_GH_THREADS:-$DIR/threads.json}" ;;
+  *) echo "fake gh: unsupported call: gh $*" >&2; exit 1 ;;
+esac

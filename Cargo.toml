@@ -1,0 +1,24 @@
+[package]
+name = "reviewfren"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chrono = "0.4.45"
+dirs = "7.0.0"
+flate2 = "1.1.10"
+futures = "0.3.34"
+libc = "0.2"
+iced = { version = "0.14", features = ["tokio", "advanced", "markdown", "image"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["rustls"] }
+rfd = { version = "0.15", default-features = false, features = ["xdg-portal", "tokio"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+similar = "3.2.1"
+syntect = { version = "5.3", default-features = false, features = ["default-fancy"] }
+tokio = { version = "1", features = ["process", "io-util", "sync", "fs", "macros", "rt-multi-thread", "time"] }
+two-face = { version = "0.5", features = ["syntect-fancy"] }
+zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[profile.dev.package."*"]
+opt-level = 2

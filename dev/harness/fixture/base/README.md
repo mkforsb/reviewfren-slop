@@ -1,0 +1,2 @@
+# Fixture
+Some text.

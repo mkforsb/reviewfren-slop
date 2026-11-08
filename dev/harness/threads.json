@@ -1,0 +1,14 @@
+[{"data":{"repository":{"pullRequest":{"reviewThreads":{"pageInfo":{"hasNextPage":false,"endCursor":null},"nodes":[
+ {"isResolved":false,"isOutdated":false,"path":"src/highlight/json.rs","line":4,"startLine":null,"diffSide":"RIGHT",
+  "comments":{"nodes":[{"author":{"login":"octocat","avatarUrl":"https://github.com/octocat.png?size=64"},"authorAssociation":"OWNER","body":"Here's a comment!","createdAt":"2026-11-03T09:59:00Z","url":"https://github.com/example/fixture/pull/7#discussion_r1"}]}},
+ {"isResolved":false,"isOutdated":false,"path":"src/highlight/json.rs","line":12,"startLine":11,"diffSide":"LEFT",
+  "comments":{"nodes":[
+   {"author":{"login":"octo-reviewer","avatarUrl":""},"authorAssociation":"MEMBER","body":"Why drop `Spans::new()` here? A **capacity hint** is fine, but:\n\n```rust\nlet mut out = SpanSet::new();\n```\n\nwould be simpler.","createdAt":"2026-11-02T15:00:00Z","url":"https://github.com/example/fixture/pull/7#discussion_r2"},
+   {"author":{"login":"octocat","avatarUrl":"https://github.com/octocat.png?size=64"},"authorAssociation":"OWNER","body":"Profiling showed reallocations on long lines.","createdAt":"2026-11-02T16:00:00Z","url":"https://github.com/example/fixture/pull/7#discussion_r3"}]}},
+ {"isResolved":true,"isOutdated":false,"path":"README.md","line":2,"startLine":null,"diffSide":"RIGHT",
+  "comments":{"nodes":[{"author":null,"authorAssociation":"NONE","body":"Typo?","createdAt":"2026-10-30T12:00:00Z","url":""}]}},
+ {"isResolved":false,"isOutdated":false,"path":"src/highlight/json.rs","line":24,"startLine":null,"diffSide":"RIGHT",
+  "comments":{"nodes":[{"author":{"login":"octo-reviewer","avatarUrl":""},"authorAssociation":"MEMBER","body":"Not in the hunks.","createdAt":"2026-11-03T08:00:00Z","url":""}]}},
+ {"isResolved":false,"isOutdated":true,"path":"src/highlight/json.rs","line":null,"startLine":null,"diffSide":"RIGHT",
+  "comments":{"nodes":[{"author":{"login":"x","avatarUrl":""},"authorAssociation":"NONE","body":"outdated","createdAt":"2026-11-01T08:00:00Z","url":""}]}}
+]}}}}}]
